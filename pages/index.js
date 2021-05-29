@@ -1,82 +1,63 @@
-import Head from 'next/head'
+import _Head from "../components/head";
+import Image from "next/image";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
+import * as _ from "../assets/constants";
+import {
+  FaFacebookSquare,
+  FaGithubSquare,
+  FaInstagramSquare,
+} from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+      <_Head title="I'm Sanviiz" />
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+      <Navbar />
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
+      <div className="container mx-auto lg:h-screen">
+        <main className="flex flex-col justify-center items-center h-full w-full">
+          <Image
+            src="/images/profile_image.jpg"
+            alt="Profile picture"
+            width={240}
+            height={240}
+            quality={100}
+            className="rounded-full"
+          />
+          <div className="w-4/5 text-left mt-8">
+            <p className="md:text-7xl text-2xl font-bold">Hi there!</p>
+            <p className="md:text-7xl text-2xl font-bold">
+              I'm
+              <span className="md:text-8xl text-3xl font-bold text-purple-700">
+                {` ${_.NAME}`}
+              </span>
             </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
+          </div>
+          <div className="w-4/5 text-right md:mb-10 mb-5">
+            <p className="md:text-7xl text-2xl font-bold">- {_.ROLE}</p>
+          </div>
+          <div>
+            <a target="_blank" href={_.FACEBOOK}>
+              <FaFacebookSquare className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer hover:text-purple-700" />
+            </a>
+            <a target="_blank" href={_.GITHUB}>
+              <FaGithubSquare className="md:w-16 md:h-16 w-12 h-12 inline mx-4 cursor-pointer hover:text-purple-700" />
+            </a>
+            <a target="_blank" href={_.INSTAGRAM}>
+              <FaInstagramSquare className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer hover:text-purple-700" />
+            </a>
+          </div>
+          <div className="w-4/5 text-right mt-4 md:mb-0 mb-10">
+            <p className="md:text-xl text-base font-semibold underline cursor-pointer">
+              About me →
             </p>
-          </a>
+          </div>
+        </main>
+      </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
-    </div>
-  )
+      <Footer />
+    </>
+  );
 }
