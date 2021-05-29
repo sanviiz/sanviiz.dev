@@ -12,7 +12,7 @@ import {
 export default function Home() {
   return (
     <>
-      <_Head title="I'm Sanviiz" />
+      <_Head />
 
       <Navbar />
 
@@ -50,7 +50,7 @@ export default function Home() {
             </a>
           </div>
           <div className="w-4/5 text-right mt-4 md:mb-0 mb-10">
-            <p className="md:text-xl text-base font-semibold underline cursor-pointer">
+            <p className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700">
               About me →
             </p>
           </div>

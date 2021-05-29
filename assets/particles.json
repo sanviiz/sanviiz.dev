@@ -64,9 +64,11 @@
         "value": "#ffffff"
       },
       "distance": 150,
+      "opacity": 0.3,
       "enable": true
     },
     "move": {
+      "speed": 1.2,
       "attract": {
         "rotate": {
           "x": 600,

@@ -14,9 +14,11 @@ export default function Navbar() {
   return (
     <nav className="flex items-center justify-between flex-wrap p-6 lg:absolute lg:w-full top-0">
       <div className="flex items-center flex-shrink-0 text-black mr-6">
-        <span className="font-semibold lg:text-3xl text-2xl tracking-tight">
-          {_.AKA}
-        </span>
+        <Link href={ROUTES.HOME}>
+          <span className="font-semibold lg:text-3xl text-2xl tracking-tight cursor-pointer">
+            {_.AKA}
+          </span>
+        </Link>
       </div>
       <div className="block lg:hidden">
         <button
