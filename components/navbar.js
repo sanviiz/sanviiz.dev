@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex items-center justify-between flex-wrap p-6 lg:absolute lg:w-full top-0">
+    <nav className="flex items-center justify-between flex-wrap p-6 fixed w-full top-0 bg-white border-b border-gray-300 z-10">
       <div className="flex items-center flex-shrink-0 text-black mr-6">
         <Link href={ROUTES.HOME}>
           <span className="font-semibold lg:text-3xl text-2xl tracking-tight cursor-pointer">
@@ -47,7 +47,7 @@ export default function Navbar() {
               HOME
             </a>
           </Link>
-          <Link href={ROUTES.HOME}>
+          <Link href={ROUTES.ABOUT}>
             <a
               href="#"
               className="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-700 mr-4"

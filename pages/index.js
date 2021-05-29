@@ -1,8 +1,10 @@
 import _Head from "../components/head";
+import Link from "next/link";
 import Image from "next/image";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import * as _ from "../assets/constants";
+import * as ROUTES from "../assets/routes";
 import {
   FaFacebookSquare,
   FaGithubSquare,
@@ -16,8 +18,8 @@ export default function Home() {
 
       <Navbar />
 
-      <div className="container mx-auto lg:h-screen">
-        <main className="flex flex-col justify-center items-center h-full w-full">
+      <div className="container mx-auto lg:h-screen lg:mt-0 mt-4">
+        <main className="flex flex-col justify-center items-center h-full w-full lg:mt-0 mt-24">
           <Image
             src="/images/profile_image.jpg"
             alt="Profile picture"
@@ -26,7 +28,7 @@ export default function Home() {
             quality={100}
             className="rounded-full"
           />
-          <div className="w-4/5 text-left mt-8">
+          <div className="w-4/5 text-left md:mt-8 mt-4">
             <p className="md:text-7xl text-2xl font-bold">Hi there!</p>
             <p className="md:text-7xl text-2xl font-bold">
               I'm
@@ -35,7 +37,7 @@ export default function Home() {
               </span>
             </p>
           </div>
-          <div className="w-4/5 text-right md:mb-10 mb-5">
+          <div className="w-4/5 text-right md:mb-10 mb-4">
             <p className="md:text-7xl text-2xl font-bold">- {_.ROLE}</p>
           </div>
           <div>
@@ -50,9 +52,11 @@ export default function Home() {
             </a>
           </div>
           <div className="w-4/5 text-right mt-4 md:mb-0 mb-10">
-            <p className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700">
-              About me →
-            </p>
+            <Link href={ROUTES.ABOUT}>
+              <p className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700">
+                About me →
+              </p>
+            </Link>
           </div>
         </main>
       </div>

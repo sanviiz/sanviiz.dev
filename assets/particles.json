@@ -30,7 +30,7 @@
     "events": {
       "onClick": {
         "enable": true,
-        "mode": "push"
+        "mode": "repulse"
       },
       "onHover": {
         "enable": true,
@@ -50,8 +50,8 @@
       "grab": {
         "distance": 400
       },
-      "push": {
-        "quantity": 1
+      "repulse": {
+        "distance": 200
       }
     }
   },
@@ -64,7 +64,7 @@
         "value": "#ffffff"
       },
       "distance": 150,
-      "opacity": 0.3,
+      "opacity": 0.2,
       "enable": true
     },
     "move": {
