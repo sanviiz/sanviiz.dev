@@ -67,9 +67,9 @@ export default function About() {
             </address>
           </div>
           <hr className="w-full border-black" />
-          <div className="w-4/5 text-left mt-4">
+          <div className="w-4/5 text-left mt-4 mb-16">
             <div className="grid md:grid-cols-2 md:gap-16 grid-cols-1">
-              <div className="mt-3 md:mb-12">
+              <div className="mt-3">
                 <h3 className="text-3xl font-normal text-gray-500">
                   {_.EDUCATION_TITLE}
                 </h3>
@@ -104,7 +104,7 @@ export default function About() {
                   );
                 })}
               </div>
-              <div className="mt-3 mb-12">
+              <div className="mt-3">
                 <h3 className="text-3xl font-normal text-gray-500">
                   {_.TECHNICAL_PROJECT_TITLE}
                 </h3>
