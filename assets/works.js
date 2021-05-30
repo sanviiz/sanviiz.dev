@@ -4,7 +4,7 @@ export const workList = [
     ROLE: "Frontend Developer",
     DATE: "December 2020 - Now",
     PLACE: "Bangkok, TH",
-    DETAILS: [
+    LISTS: [
       "UX/UI Design for Responsive Web Application (Mobile/Desktop)",
       "Develop CMS System on Web Application by using Laravel and Next.js (React.js)",
     ],
@@ -14,7 +14,7 @@ export const workList = [
     ROLE: "IoT Developer",
     DATE: "Project by Project",
     PLACE: "Bangkok, TH",
-    DETAILS: [
+    LISTS: [
       "Software Develop for IoT Project",
       "Hardware Embedded and Design",
       "IoT Project Consultant",

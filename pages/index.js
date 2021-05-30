@@ -5,11 +5,7 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import * as _ from "../assets/constants";
 import * as ROUTES from "../assets/routes";
-import {
-  FaFacebookSquare,
-  FaGithubSquare,
-  FaInstagramSquare,
-} from "react-icons/fa";
+import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -29,9 +25,9 @@ export default function Home() {
             className="rounded-full"
           />
           <div className="w-4/5 text-left md:mt-8 mt-4">
-            <h2 className="md:text-6xl text-2xl font-bold">Hi there!</h2>
+            <h2 className="md:text-6xl text-2xl font-bold">{_.GREETING}</h2>
             <h1 className="md:text-6xl text-2xl font-bold">
-              I'm
+              {_.INTRODUCE}
               <span className="md:text-7xl text-3xl font-bold text-purple-700">
                 {` ${_.NAME}`}
               </span>
@@ -47,8 +43,8 @@ export default function Home() {
             <a target="_blank" href={_.GITHUB}>
               <FaGithubSquare className="md:w-16 md:h-16 w-12 h-12 inline mx-4 cursor-pointer hover:text-purple-700" />
             </a>
-            <a target="_blank" href={_.INSTAGRAM}>
-              <FaInstagramSquare className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer hover:text-purple-700" />
+            <a target="_blank" href={_.LINKEDIN}>
+              <FaLinkedin className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer hover:text-purple-700" />
             </a>
           </div>
           <div className="w-4/5 text-right mt-4 md:mb-0 mb-10">
@@ -57,7 +53,7 @@ export default function Home() {
                 href="#"
                 className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700"
               >
-                About me →
+                {_.ABOUT_LINK_DESCRIPTION}
               </a>
             </Link>
           </div>
