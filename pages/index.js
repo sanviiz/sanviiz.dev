@@ -1,19 +1,21 @@
-import _Head from "../components/head";
+import { useEffect } from "react";
+import { useAppContext } from "../contexts/state";
 import Link from "next/link";
 import Image from "next/image";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
 import * as _ from "../assets/constants";
 import * as ROUTES from "../assets/routes";
 import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
+  const sharedState = useAppContext();
+  const setWindowTitle = sharedState.windowTitle[1];
+
+  useEffect(() => {
+    setWindowTitle("Home");
+  }, []);
+
   return (
     <>
-      <_Head />
-
-      <Navbar />
-
       <div className="container mx-auto lg:mt-0 lg:h-screen mt-4">
         <main className="flex flex-col justify-center items-center h-full w-full lg:mt-0 mt-24">
           <Image
@@ -59,8 +61,6 @@ export default function Home() {
           </div>
         </main>
       </div>
-
-      <Footer />
     </>
   );
 }

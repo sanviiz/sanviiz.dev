@@ -1,7 +1,6 @@
-import _Head from "../components/head";
+import { useEffect } from "react";
+import { useAppContext } from "../contexts/state";
 import Image from "next/image";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
 import Education from "../components/education";
 import Skills from "../components/skills";
 import Work from "../components/work";
@@ -14,12 +13,15 @@ import { technicalProjectList } from "../assets/technicalProjects";
 import { businessProjectList } from "../assets/businessProjects";
 
 export default function About() {
+  const sharedState = useAppContext();
+  const setWindowTitle = sharedState.windowTitle[1];
+
+  useEffect(() => {
+    setWindowTitle("About");
+  }, []);
+
   return (
     <>
-      <_Head title="About" />
-
-      <Navbar />
-
       <div className="container mx-auto">
         <main className="flex flex-col items-center h-full w-full mt-24">
           <Image
@@ -132,8 +134,6 @@ export default function About() {
           </div>
         </main>
       </div>
-
-      <Footer />
     </>
   );
 }

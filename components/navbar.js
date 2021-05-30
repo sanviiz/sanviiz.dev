@@ -1,6 +1,6 @@
-import * as _ from "../assets/constants";
-import Link from "next/link";
 import { useState } from "react";
+import Link from "next/link";
+import * as _ from "../assets/constants";
 import * as ROUTES from "../assets/routes";
 
 export default function Navbar() {
@@ -30,7 +30,7 @@ export default function Navbar() {
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title>Menu</title>
+            <title>{_.NAVBAR_COLLAPSE_BUTTON_TITLE}</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
         </button>
@@ -44,7 +44,7 @@ export default function Navbar() {
               href="#"
               className="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-700 mr-4"
             >
-              HOME
+              {_.NAVBAR_HOME_LINK_TITLE}
             </a>
           </Link>
           <Link href={ROUTES.ABOUT}>
@@ -52,15 +52,15 @@ export default function Navbar() {
               href="#"
               className="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-700 mr-4"
             >
-              ABOUT
+              {_.NAVBAR_ABOUT_LINK_TITLE}
             </a>
           </Link>
-          <Link href={ROUTES.HOME}>
+          <Link href={ROUTES.CONTACT}>
             <a
               href="#"
               className="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-700"
             >
-              CONTACT
+              {_.NAVBAR_CONTACT_LINK_TITLE}
             </a>
           </Link>
         </div>
