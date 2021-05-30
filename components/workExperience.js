@@ -10,7 +10,9 @@ export default function WorkExperience(props) {
       </p>
       <ul className="list-disc list-inside text-base font-base text-gray-600">
         {work.DETAILS.map((detailElement) => {
-          return <li>{detailElement}</li>;
+          return (
+            <li key={work.DETAILS.indexOf(detailElement)}>{detailElement}</li>
+          );
         })}
       </ul>
     </div>
