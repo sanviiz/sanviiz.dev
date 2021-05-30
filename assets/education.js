@@ -14,7 +14,7 @@ export const educationList = [
   {
     ACADEMY: "CODEMOBILES ONLINE COURSE",
     PROGRAM: "Warehousing Department on Web Application",
-    STATUS: "By using All Stack which are:",
+    STATUS: "By using Stacks which are:",
     STATUS_LIST: [
       "Frontend: React.js with AdminLTE Theme",
       "Backend: Node.js and Express.js with Sequelize ORM on SQLite database engine",

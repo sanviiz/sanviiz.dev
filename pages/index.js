@@ -29,16 +29,16 @@ export default function Home() {
             className="rounded-full"
           />
           <div className="w-4/5 text-left md:mt-8 mt-4">
-            <p className="md:text-6xl text-2xl font-bold">Hi there!</p>
-            <p className="md:text-6xl text-2xl font-bold">
+            <h2 className="md:text-6xl text-2xl font-bold">Hi there!</h2>
+            <h1 className="md:text-6xl text-2xl font-bold">
               I'm
               <span className="md:text-7xl text-3xl font-bold text-purple-700">
                 {` ${_.NAME}`}
               </span>
-            </p>
+            </h1>
           </div>
           <div className="w-4/5 text-right md:mb-10 mb-4">
-            <p className="md:text-6xl text-2xl font-bold">- {_.ROLE}</p>
+            <h2 className="md:text-6xl text-2xl font-bold">- {_.ROLE}</h2>
           </div>
           <div>
             <a target="_blank" href={_.FACEBOOK}>
@@ -53,9 +53,12 @@ export default function Home() {
           </div>
           <div className="w-4/5 text-right mt-4 md:mb-0 mb-10">
             <Link href={ROUTES.ABOUT}>
-              <p className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700">
+              <a
+                href="#"
+                className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700"
+              >
                 About me →
-              </p>
+              </a>
             </Link>
           </div>
         </main>

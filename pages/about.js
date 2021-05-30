@@ -27,12 +27,12 @@ export default function About() {
             quality={100}
             className="rounded-full"
           />
-          <p className="text-3xl font-base my-3">{_.NAME}</p>
+          <h3 className="text-3xl font-base my-3">{_.NAME}</h3>
           <hr className="w-full border-black" />
           <div className="w-4/5 text-left mt-4">
             <div className="grid md:grid-cols-2 md:gap-16 grid-cols-1 gap-8">
               <div className="mt-3 mb-12">
-                <p className="text-3xl font-base text-gray-500">EDUCATION</p>
+                <h3 className="text-3xl font-base text-gray-500">EDUCATION</h3>
                 {educationList.map((educationElement) => {
                   return (
                     <Education
@@ -41,7 +41,9 @@ export default function About() {
                     />
                   );
                 })}
-                <p className="text-3xl font-base text-gray-500 mt-5">SKILLS</p>
+                <h3 className="text-3xl font-base text-gray-500 mt-5">
+                  SKILLS
+                </h3>
                 {skillList.map((skillElement) => {
                   return (
                     <Skills
@@ -50,9 +52,9 @@ export default function About() {
                     />
                   );
                 })}
-                <p className="text-3xl font-base text-gray-500 mt-5">
+                <h3 className="text-3xl font-base text-gray-500 mt-5">
                   WORK EXPERIENCE
-                </p>
+                </h3>
                 {workList.map((workElement) => {
                   return (
                     <WorkExperience
@@ -63,7 +65,7 @@ export default function About() {
                 })}
               </div>
               <div className="mt-3 mb-12 text-center">
-                - Under mantainace 🔨 -
+                <p>- Under mantainace 🔨 -</p>
               </div>
             </div>
           </div>
