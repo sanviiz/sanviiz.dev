@@ -1,18 +1,39 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import * as _ from "../assets/constants";
 import * as ROUTES from "../assets/routes";
 
 export default function Navbar() {
   const [toggleHidden, setToggleHidden] = useState("hidden");
+  const navbarWrapperRef = useRef(null);
 
   const handlerButtonClick = () => {
     if (toggleHidden === "") setToggleHidden("hidden");
     else setToggleHidden("");
   };
 
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        navbarWrapperRef.current &&
+        !navbarWrapperRef.current.contains(event.target)
+      ) {
+        setToggleHidden("hidden");
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [navbarWrapperRef]);
+
   return (
-    <nav className="flex items-center justify-between flex-wrap p-6 fixed w-full top-0 bg-white border-b border-gray-300 z-10">
+    <nav
+      ref={navbarWrapperRef}
+      className="flex items-center justify-between flex-wrap p-6 fixed w-full top-0 bg-white border-b border-gray-300 z-10"
+    >
       <div className="flex items-center flex-shrink-0 text-black mr-6">
         <Link href={ROUTES.HOME}>
           <span className="font-semibold lg:text-3xl text-2xl tracking-tight cursor-pointer">
