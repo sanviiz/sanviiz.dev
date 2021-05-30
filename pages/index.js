@@ -18,7 +18,7 @@ export default function Home() {
 
       <Navbar />
 
-      <div className="container mx-auto lg:h-screen lg:mt-0 mt-4">
+      <div className="container mx-auto lg:mt-0 lg:h-screen mt-4">
         <main className="flex flex-col justify-center items-center h-full w-full lg:mt-0 mt-24">
           <Image
             src="/images/profile_image.jpg"
@@ -29,16 +29,16 @@ export default function Home() {
             className="rounded-full"
           />
           <div className="w-4/5 text-left md:mt-8 mt-4">
-            <p className="md:text-7xl text-2xl font-bold">Hi there!</p>
-            <p className="md:text-7xl text-2xl font-bold">
+            <p className="md:text-6xl text-2xl font-bold">Hi there!</p>
+            <p className="md:text-6xl text-2xl font-bold">
               I'm
-              <span className="md:text-8xl text-3xl font-bold text-purple-700">
+              <span className="md:text-7xl text-3xl font-bold text-purple-700">
                 {` ${_.NAME}`}
               </span>
             </p>
           </div>
           <div className="w-4/5 text-right md:mb-10 mb-4">
-            <p className="md:text-7xl text-2xl font-bold">- {_.ROLE}</p>
+            <p className="md:text-6xl text-2xl font-bold">- {_.ROLE}</p>
           </div>
           <div>
             <a target="_blank" href={_.FACEBOOK}>

@@ -77,10 +77,10 @@
       },
       "enable": true,
       "outModes": {
-        "bottom": "out",
-        "left": "out",
-        "right": "out",
-        "top": "out"
+        "bottom": "bounce",
+        "left": "bounce",
+        "right": "bounce",
+        "top": "bounce"
       }
     },
     "number": {
