@@ -16,12 +16,12 @@ export const FACEBOOK = `https://www.facebook.com/sanviiz/`;
 export const GITHUB = `https://github.com/sanviiz/`;
 export const INSTAGRAM = `https://www.instagram.com/taze_sanviiz/`;
 export const LINKEDIN = `https://www.linkedin.com/in/sanviiz/`;
-export const WEBSITE = `https://sanviiz.vercel.app/`;
+export const WEBSITE = `https://www.sanviiz.dev/`;
 export const EMAIL = `mailto:sanviiz06@hotmail.com`;
 export const TEL = `tel:+66830544633`;
 
 export const GITHUB_CONTACT_DISPLAY = `github.com/sanviiz`;
-export const WEBSITE_CONTACT_DISPLAY = `sanviiz.vercel.app`;
+export const WEBSITE_CONTACT_DISPLAY = `www.sanviiz.dev`;
 export const EMAIL_CONTACT_DISPLAY = `sanviiz06@hotmail.com`;
 export const TEL_CONTACT_DISPLAY = `(+66)83-054-4633`;
 
