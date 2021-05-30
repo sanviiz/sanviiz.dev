@@ -45,7 +45,7 @@
         "distance": 200,
         "duration": 2,
         "opacity": 0.9,
-        "size": 100
+        "size": 0
       },
       "grab": {
         "distance": 400
@@ -87,7 +87,7 @@
       "density": {
         "enable": true
       },
-      "value": 50
+      "value": 20
     },
     "opacity": {
       "animation": {
