@@ -1,4 +1,4 @@
-export const AKA = `Sanviiz`;
+export const AKA = `sanviiz.dev`;
 export const NAME = `Pakkaphong Akkabut`;
 export const ROLE = `Web developer`;
 
