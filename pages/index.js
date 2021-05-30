@@ -49,7 +49,7 @@ export default function Home() {
               <FaLinkedin className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer hover:text-purple-700" />
             </a>
           </div>
-          <div className="w-4/5 text-right mt-4 md:mb-0 mb-10">
+          <div className="w-4/5 text-right mt-4 lg:mb-0 mb-16">
             <Link href={ROUTES.ABOUT}>
               <a
                 href="#"
