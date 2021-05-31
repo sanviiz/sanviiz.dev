@@ -46,7 +46,7 @@ export default function Contact() {
             <div className="md:w-80 w-full h-32 border border-black lg:hover:border-purple-700 bg-white lg:hover:text-purple-700 rounded-lg cursor-pointer flex items-center lg:hover:transform lg:hover:scale-110 transition active:border-purple-700 active:text-purple-700 ease-in-out">
               <FaFacebook className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
               <div>
-                <span className="text-lg">{_.FACEBOOK_DISPLAY_NAME}</span>
+                <span className="text-lg mr-4">{_.FACEBOOK_DISPLAY_NAME}</span>
               </div>
             </div>
           </a>
@@ -55,7 +55,7 @@ export default function Contact() {
               <FaGithub className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
               <div>
                 <span className="text-lg block">{_.GITHUB_DISPLAY_NAME}</span>
-                <span className="text-lg">({_.NAME})</span>
+                <span className="text-lg mr-4">({_.NAME})</span>
               </div>
             </div>
           </a>
@@ -63,7 +63,7 @@ export default function Contact() {
             <div className="md:w-80 w-full h-32 border border-black lg:hover:border-purple-700 bg-white lg:hover:text-purple-700 rounded-lg cursor-pointer flex items-center lg:hover:transform lg:hover:scale-110 transition active:border-purple-700 active:text-purple-700 ease-in-out">
               <FaLinkedin className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
               <div>
-                <span className="text-lg">{_.LINKEDIN_DISPLAY_NAME}</span>
+                <span className="text-lg mr-4">{_.LINKEDIN_DISPLAY_NAME}</span>
               </div>
             </div>
           </a>
@@ -71,7 +71,7 @@ export default function Contact() {
             <div className="md:w-80 w-full h-32 border border-black lg:hover:border-purple-700 bg-white lg:hover:text-purple-700 rounded-lg cursor-pointer flex items-center lg:hover:transform lg:hover:scale-110 transition active:border-purple-700 active:text-purple-700 ease-in-out">
               <FaEnvelopeOpenText className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
               <div>
-                <span className="text-lg">{_.EMAIL_CONTACT_DISPLAY}</span>
+                <span className="text-lg mr-4">{_.EMAIL_CONTACT_DISPLAY}</span>
               </div>
             </div>
           </a>
@@ -79,7 +79,7 @@ export default function Contact() {
             <div className="md:w-80 w-full h-32 border border-black lg:hover:border-purple-700 bg-white lg:hover:text-purple-700 rounded-lg cursor-pointer flex items-center lg:hover:transform lg:hover:scale-110 transition active:border-purple-700 active:text-purple-700 ease-in-out">
               <FaPhone className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
               <div>
-                <span className="text-lg">{_.TEL_CONTACT_DISPLAY}</span>
+                <span className="text-lg mr-4">{_.TEL_CONTACT_DISPLAY}</span>
               </div>
             </div>
           </a>
@@ -89,7 +89,7 @@ export default function Contact() {
           >
             <FaDiscord className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
             <div>
-              <span className="text-lg">
+              <span className="text-lg mr-4">
                 {_.DISCORD_DISPLAY_NAME}
                 <br />
                 {copyStatus && (
