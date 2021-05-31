@@ -68,7 +68,7 @@
       "enable": false
     },
     "move": {
-      "speed": 0.3,
+      "speed": 0.4,
       "attract": {
         "rotate": {
           "x": 600,
