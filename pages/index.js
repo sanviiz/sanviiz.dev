@@ -29,12 +29,12 @@ export default function Home() {
         <main className="flex flex-col justify-center items-center h-full w-full lg:mt-0 mt-24">
           <Image
             src={`/images/${_.PROFILE_IMAGE_FILE}`}
-            alt="Profile picture"
+            alt={_.PROFILE_IMAGE_ALT}
             priority={true}
             width={240}
             height={240}
             quality={90}
-            className="rounded-full"
+            className={`rounded-full bg-gray-100`}
           />
           <div className="w-4/5 text-left md:mt-8 mt-4">
             <h2 className="md:text-6xl text-2xl font-bold">{_.GREETING}</h2>

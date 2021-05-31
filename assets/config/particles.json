@@ -44,7 +44,7 @@
       "bubble": {
         "distance": 200,
         "duration": 2,
-        "opacity": 0.9,
+        "opacity": 0.5,
         "size": 0
       },
       "grab": {
@@ -65,10 +65,10 @@
       },
       "distance": 150,
       "opacity": 0.2,
-      "enable": true
+      "enable": false
     },
     "move": {
-      "speed": 1.2,
+      "speed": 0.3,
       "attract": {
         "rotate": {
           "x": 600,
@@ -77,36 +77,39 @@
       },
       "enable": true,
       "outModes": {
-        "bottom": "bounce",
-        "left": "bounce",
-        "right": "bounce",
-        "top": "bounce"
+        "bottom": "out",
+        "left": "out",
+        "right": "out",
+        "top": "out"
       }
+    },
+    "collisions": {
+      "mode": "absorb"
     },
     "number": {
       "density": {
         "enable": true
       },
-      "value": 20
+      "value": 10
     },
     "opacity": {
       "animation": {
-        "speed": 0.5,
-        "minimumValue": 0.1
+        "speed": 0.3,
+        "minimumValue": 0.2
       },
       "value": 0.3
     },
     "size": {
       "random": {
-        "enable": true
+        "enable": false
       },
       "value": {
-        "min": 1,
-        "max": 30
+        "min": 10,
+        "max": 70
       },
       "animation": {
         "speed": 20,
-        "minimumValue": 0.1
+        "minimumValue": 1
       }
     }
   }

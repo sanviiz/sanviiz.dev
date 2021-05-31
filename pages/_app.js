@@ -7,12 +7,14 @@ import { AppContextWrapper } from "../contexts/state";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <AppContextWrapper>
-      <Particles params={particles} />
-      <Navbar />
-      <Component {...pageProps} />
-      <Footer />
-    </AppContextWrapper>
+    <div className="font-sans">
+      <AppContextWrapper>
+        <Particles params={particles} />
+        <Navbar />
+        <Component {...pageProps} />
+        <Footer />
+      </AppContextWrapper>
+    </div>
   );
 }
 

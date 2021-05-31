@@ -3,6 +3,7 @@ export const NAME = `Pakkaphong Akkabut`;
 export const ROLE = `Web developer`;
 
 export const PROFILE_IMAGE_FILE = `profile_image.jpg`;
+export const PROFILE_IMAGE_ALT = `Profile picture`;
 
 export const GREETING = `Hi there!`;
 export const CONTACT_GREETING_START = `Contact`;
