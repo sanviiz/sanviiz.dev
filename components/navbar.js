@@ -12,6 +12,10 @@ export default function Navbar() {
     else setToggleHidden("");
   };
 
+  const handlerLinkClick = () => {
+    setToggleHidden("hidden");
+  };
+
   useEffect(() => {
     function handleClickOutside(event) {
       if (
@@ -36,7 +40,10 @@ export default function Navbar() {
     >
       <div className="flex items-center flex-shrink-0 text-black mr-6">
         <Link href={ROUTES.HOME}>
-          <span className="font-semibold lg:text-3xl text-2xl tracking-tight cursor-pointer">
+          <span
+            className="font-semibold lg:text-3xl text-2xl tracking-tight cursor-pointer"
+            onClick={handlerLinkClick}
+          >
             {_.AKA}
           </span>
         </Link>
@@ -64,6 +71,7 @@ export default function Navbar() {
             <a
               href="#"
               className="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-700 mr-4"
+              onClick={handlerLinkClick}
             >
               {_.NAVBAR_HOME_LINK_TITLE}
             </a>
@@ -72,6 +80,7 @@ export default function Navbar() {
             <a
               href="#"
               className="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-700 mr-4"
+              onClick={handlerLinkClick}
             >
               {_.NAVBAR_ABOUT_LINK_TITLE}
             </a>
@@ -80,6 +89,7 @@ export default function Navbar() {
             <a
               href="#"
               className="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-700"
+              onClick={handlerLinkClick}
             >
               {_.NAVBAR_CONTACT_LINK_TITLE}
             </a>

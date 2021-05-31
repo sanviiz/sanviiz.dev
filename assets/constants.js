@@ -6,7 +6,9 @@ export const GREETING = `Hi there!`;
 export const CONTACT_GREETING_START = `Contact`;
 export const CONTACT_GREETING_END = `ME↓`;
 export const INTRODUCE = `I'm`;
-export const ABOUT_LINK_DESCRIPTION = `About me →`;
+export const ABOUT_LINK_DESCRIPTION = `About me`;
+export const HOME_LINK_DESCRIPTION = `Home`;
+export const CONTACT_LINK_DESCRIPTION = `Contact`;
 export const WINDOW_TITLE = `All about ${NAME}`;
 export const WINDOW_ICON = `favicon.svg`;
 

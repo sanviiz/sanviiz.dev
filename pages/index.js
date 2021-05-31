@@ -22,7 +22,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="container mx-auto lg:mt-0 lg:h-screen mt-4">
+    <div className="container mx-auto lg:mt-0 lg:h-screen w-screen mt-4">
       <main className="flex flex-col justify-center items-center h-full w-full lg:mt-0 mt-24">
         <Image
           src="/images/profile_image.jpg"
@@ -55,13 +55,13 @@ export default function Home() {
             <FaLinkedin className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer hover:text-purple-700" />
           </a>
         </div>
-        <div className="w-4/5 text-right mt-4 lg:mb-0 mb-16">
+        <div className="w-4/5 text-right mt-4 lg:mb-0 mb-20">
           <Link href={ROUTES.ABOUT}>
             <a
               href="#"
               className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700"
             >
-              {_.ABOUT_LINK_DESCRIPTION}
+              {_.ABOUT_LINK_DESCRIPTION} →
             </a>
           </Link>
         </div>

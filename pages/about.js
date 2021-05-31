@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import { useAppContext } from "../contexts/state";
 import Image from "next/image";
+import Link from "next/link";
 import Education from "../components/education";
 import Skills from "../components/skills";
 import Work from "../components/work";
 import Projects from "../components/projects";
 import * as _ from "../assets/constants";
+import * as ROUTES from "../assets/routes";
 import * as SEO from "../assets/seo";
 import { educationList } from "../assets/contents/education";
 import { skillList } from "../assets/contents/skills";
@@ -28,7 +30,7 @@ export default function About() {
   }, []);
 
   return (
-    <div className="container mx-auto mb-16">
+    <div className="container mx-auto">
       <main className="flex flex-col items-center h-full w-full mt-24">
         <Image
           src="/images/profile_image.jpg"
@@ -133,6 +135,24 @@ export default function About() {
                 );
               })}
             </div>
+          </div>
+          <div className="flex justify-between text-right lg:mt-6 mt-2 mb-20">
+            <Link href={ROUTES.HOME}>
+              <a
+                href="#"
+                className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700"
+              >
+                ← {_.HOME_LINK_DESCRIPTION}
+              </a>
+            </Link>
+            <Link href={ROUTES.CONTACT}>
+              <a
+                href="#"
+                className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700"
+              >
+                {_.CONTACT_LINK_DESCRIPTION} →
+              </a>
+            </Link>
           </div>
         </div>
       </main>
