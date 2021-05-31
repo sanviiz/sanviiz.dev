@@ -28,7 +28,7 @@ export default function About() {
   }, []);
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mb-16">
       <main className="flex flex-col items-center h-full w-full mt-24">
         <Image
           src="/images/profile_image.jpg"
@@ -72,7 +72,7 @@ export default function About() {
           </address>
         </div>
         <hr className="w-full border-black" />
-        <div className="w-4/5 text-left mt-4 mb-16">
+        <div className="w-4/5 text-left mt-4">
           <div className="grid md:grid-cols-2 md:gap-16 grid-cols-1">
             <div className="mt-3">
               <h3 className="text-3xl font-normal text-gray-500">
