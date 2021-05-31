@@ -43,7 +43,7 @@ export default function Contact() {
         </h1>
         <div className="grid lg:grid-cols-3 gap-8">
           <a target="_blank" href={_.FACEBOOK}>
-            <div className="w-80 h-32 border border-black hover:border-purple-700 bg-white hover:text-purple-700 rounded-lg cursor-pointer flex items-center hover:transform hover:scale-110 transition ease-in-out">
+            <div className="w-80 h-32 border border-black lg:hover:border-purple-700 bg-white lg:hover:text-purple-700 rounded-lg cursor-pointer flex items-center lg:hover:transform lg:hover:scale-110 transition active:border-purple-700 active:text-purple-700 active:transform active:scale-110  ease-in-out">
               <FaFacebook className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
               <div>
                 <span className="text-lg">{_.FACEBOOK_DISPLAY_NAME}</span>
@@ -51,7 +51,7 @@ export default function Contact() {
             </div>
           </a>
           <a target="_blank" href={_.GITHUB}>
-            <div className="w-80 h-32 border border-black hover:border-purple-700 bg-white hover:text-purple-700 rounded-lg cursor-pointer flex items-center hover:transform hover:scale-110 transition ease-in-out">
+            <div className="w-80 h-32 border border-black lg:hover:border-purple-700 bg-white lg:hover:text-purple-700 rounded-lg cursor-pointer flex items-center lg:hover:transform lg:hover:scale-110 transition active:border-purple-700 active:text-purple-700 active:transform active:scale-110 ease-in-out">
               <FaGithub className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
               <div>
                 <span className="text-lg block">{_.GITHUB_DISPLAY_NAME}</span>
@@ -60,7 +60,7 @@ export default function Contact() {
             </div>
           </a>
           <a target="_blank" href={_.LINKEDIN}>
-            <div className="w-80 h-32 border border-black hover:border-purple-700 bg-white hover:text-purple-700 rounded-lg cursor-pointer flex items-center hover:transform hover:scale-110 transition ease-in-out">
+            <div className="w-80 h-32 border border-black lg:hover:border-purple-700 bg-white lg:hover:text-purple-700 rounded-lg cursor-pointer flex items-center lg:hover:transform lg:hover:scale-110 transition active:border-purple-700 active:text-purple-700 active:transform active:scale-110  ease-in-out">
               <FaLinkedin className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
               <div>
                 <span className="text-lg">{_.LINKEDIN_DISPLAY_NAME}</span>
@@ -68,7 +68,7 @@ export default function Contact() {
             </div>
           </a>
           <a href={_.EMAIL}>
-            <div className="w-80 h-32 border border-black hover:border-purple-700 bg-white hover:text-purple-700 rounded-lg cursor-pointer flex items-center hover:transform hover:scale-110 transition ease-in-out">
+            <div className="w-80 h-32 border border-black lg:hover:border-purple-700 bg-white lg:hover:text-purple-700 rounded-lg cursor-pointer flex items-center lg:hover:transform lg:hover:scale-110 transition active:border-purple-700 active:text-purple-700 active:transform active:scale-110  ease-in-out">
               <FaEnvelopeOpenText className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
               <div>
                 <span className="text-lg">{_.EMAIL_CONTACT_DISPLAY}</span>
@@ -76,7 +76,7 @@ export default function Contact() {
             </div>
           </a>
           <a href={_.TEL}>
-            <div className="w-80 h-32 border border-black hover:border-purple-700 bg-white hover:text-purple-700 rounded-lg cursor-pointer flex items-center hover:transform hover:scale-110 transition ease-in-out">
+            <div className="w-80 h-32 border border-black lg:hover:border-purple-700 bg-white lg:hover:text-purple-700 rounded-lg cursor-pointer flex items-center lg:hover:transform lg:hover:scale-110 transition active:border-purple-700 active:text-purple-700 active:transform active:scale-110  ease-in-out">
               <FaPhone className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
               <div>
                 <span className="text-lg">{_.TEL_CONTACT_DISPLAY}</span>
@@ -84,7 +84,7 @@ export default function Contact() {
             </div>
           </a>
           <div
-            className="w-80 h-32 border border-black hover:border-purple-700 bg-white hover:text-purple-700 rounded-lg cursor-pointer flex items-center hover:transform hover:scale-110 transition ease-in-out"
+            className="w-80 h-32 border border-black lg:hover:border-purple-700 bg-white lg:hover:text-purple-700 rounded-lg cursor-pointer flex items-center lg:hover:transform lg:hover:scale-110 transition active:border-purple-700 active:text-purple-700 active:transform active:scale-110  ease-in-out"
             onClick={handleClickToCopy}
           >
             <FaDiscord className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
