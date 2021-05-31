@@ -2,6 +2,8 @@ export const AKA = `sanviiz.dev`;
 export const NAME = `Pakkaphong Akkabut`;
 export const ROLE = `Web developer`;
 
+export const PROFILE_IMAGE_FILE = `profile_image.jpg`;
+
 export const GREETING = `Hi there!`;
 export const CONTACT_GREETING_START = `Contact`;
 export const CONTACT_GREETING_END = `ME↓`;

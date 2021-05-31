@@ -28,11 +28,12 @@ export default function Home() {
       <div className="container mx-auto lg:mt-0 lg:h-screen w-screen mt-4">
         <main className="flex flex-col justify-center items-center h-full w-full lg:mt-0 mt-24">
           <Image
-            src="/images/profile_image.jpg"
+            src={`/images/${_.PROFILE_IMAGE_FILE}`}
             alt="Profile picture"
+            priority={true}
             width={240}
             height={240}
-            quality={100}
+            quality={90}
             className="rounded-full"
           />
           <div className="w-4/5 text-left md:mt-8 mt-4">

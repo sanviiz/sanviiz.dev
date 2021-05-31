@@ -36,11 +36,12 @@ export default function About() {
       <div className="container mx-auto">
         <main className="flex flex-col items-center h-full w-full mt-24">
           <Image
-            src="/images/profile_image.jpg"
+            src={`/images/${_.PROFILE_IMAGE_FILE}`}
             alt="Profile picture"
+            priority={true}
             width={150}
             height={150}
-            quality={100}
+            quality={90}
             className="rounded-full"
           />
           <h3 className="text-3xl font-normal mt-3">{_.NAME}</h3>
