@@ -4,14 +4,21 @@ import Link from "next/link";
 import Image from "next/image";
 import * as _ from "../assets/constants";
 import * as ROUTES from "../assets/routes";
+import * as SEO from "../assets/seo";
 import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   const sharedState = useAppContext();
   const setWindowTitle = sharedState.windowTitle[1];
+  const setDescriptionContent = sharedState.descriptionContent[1];
+  const setKeywordsContent = sharedState.keywordsContent[1];
+  const setOgDescriptionContent = sharedState.ogDescriptionContent[1];
 
   useEffect(() => {
-    setWindowTitle("Home");
+    setWindowTitle(SEO.HOME_PAGE_TITLE);
+    setDescriptionContent(SEO.HOME_DESCRIPTION_CONTENT);
+    setKeywordsContent(SEO.HOME_KEYWORDS_CONTENT);
+    setOgDescriptionContent(SEO.HOME_OGDESCRIPTIONS_CONTENT);
   }, []);
 
   return (

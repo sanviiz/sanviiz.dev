@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import Particles from "react-particles-js";
-import particles from "../assets/particles.json";
+import particles from "../assets/config/particles.json";
 import _Head from "../components/head";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";

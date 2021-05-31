@@ -6,6 +6,9 @@ export const GREETING = `Hi there!`;
 export const INTRODUCE = `I'm`;
 export const ABOUT_LINK_DESCRIPTION = `About me →`;
 export const WINDOW_TITLE = `All about ${AKA}`;
+export const WINDOW_ICON = `favicon.svg`;
+
+export const VIEWPORT_CONTENT = `initial-scale=1.0, width=device-width`;
 
 export const NAVBAR_COLLAPSE_BUTTON_TITLE = `Menu`;
 export const NAVBAR_HOME_LINK_TITLE = `HOME`;
