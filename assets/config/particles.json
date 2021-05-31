@@ -95,7 +95,7 @@
     "opacity": {
       "animation": {
         "speed": 0.3,
-        "minimumValue": 0.2
+        "minimumValue": 0.1
       },
       "value": 0.3
     },
