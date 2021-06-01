@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import * as _ from "../assets/constants";
 import * as ROUTES from "../assets/routes";
 import * as SEO from "../assets/seo";
 import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
+  const router = useRouter();
   const [printString, setPrintString] = useState(_.NAME_START_TYPING);
   const [printedString, setPrintedString] = useState(false);
   const [typingDelay, setTypingDelay] = useState(_.START_TYPING_DELAY);
@@ -86,15 +88,18 @@ export default function Home() {
             <h2 className="md:text-6xl text-2xl font-bold">- {_.ROLE}</h2>
           </div>
           <div>
-            <a target="_blank" rel="noopener" href={_.FACEBOOK}>
-              <FaFacebookSquare className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer hover:text-purple-700" />
-            </a>
-            <a target="_blank" rel="noopener" href={_.GITHUB}>
-              <FaGithubSquare className="md:w-16 md:h-16 w-12 h-12 inline mx-4 cursor-pointer hover:text-purple-700" />
-            </a>
-            <a target="_blank" rel="noopener" href={_.LINKEDIN}>
-              <FaLinkedin className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer hover:text-purple-700" />
-            </a>
+            <FaFacebookSquare
+              className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer hover:text-purple-700"
+              onClick={() => router.push(_.FACEBOOK)}
+            />
+            <FaGithubSquare
+              className="md:w-16 md:h-16 w-12 h-12 inline mx-4 cursor-pointer hover:text-purple-700"
+              onClick={() => router.push(_.GITHUB)}
+            />
+            <FaLinkedin
+              className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer hover:text-purple-700"
+              onClick={() => router.push(_.LINKEDIN)}
+            />
           </div>
           <div className="w-4/5 text-right mt-4 xl:mb-0 mb-20">
             <Link href={ROUTES.ABOUT}>

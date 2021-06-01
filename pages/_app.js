@@ -5,13 +5,11 @@ import { AppContextWrapper } from "../contexts/state";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="font-sans">
-      <AppContextWrapper>
-        <Navbar />
-        <Component {...pageProps} />
-        <Footer />
-      </AppContextWrapper>
-    </div>
+    <AppContextWrapper>
+      <Navbar />
+      <Component {...pageProps} />
+      <Footer />
+    </AppContextWrapper>
   );
 }
 
