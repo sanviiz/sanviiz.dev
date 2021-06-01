@@ -44,7 +44,7 @@ export default function Navbar() {
             className="font-semibold lg:text-3xl text-2xl tracking-tight cursor-pointer"
             onClick={handlerLinkClick}
           >
-            {_.AKA}
+            {_.LOGO}
           </span>
         </Link>
       </div>

@@ -25,8 +25,8 @@ export default function Home() {
         />
       </Head>
 
-      <div className="container mx-auto lg:mt-0 lg:h-screen w-screen mt-4">
-        <main className="flex flex-col justify-center items-center h-full w-full lg:mt-0 mt-24">
+      <div className="container mx-auto xl:mt-0 xl:h-screen w-screen mt-4">
+        <main className="flex flex-col justify-center items-center h-full w-full xl:mt-0 mt-24">
           <Image
             src={`/images/${_.PROFILE_IMAGE_FILE}`}
             alt={_.PROFILE_IMAGE_ALT}
@@ -59,7 +59,7 @@ export default function Home() {
               <FaLinkedin className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer hover:text-purple-700" />
             </a>
           </div>
-          <div className="w-4/5 text-right mt-4 lg:mb-0 mb-20">
+          <div className="w-4/5 text-right mt-4 xl:mb-0 mb-20">
             <Link href={ROUTES.ABOUT}>
               <a
                 href="#"

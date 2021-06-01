@@ -1,6 +1,8 @@
-export const AKA = `sanviiz.dev`;
+export const AKA = `Sanviiz`;
 export const NAME = `Pakkaphong Akkabut`;
 export const ROLE = `Web developer`;
+
+export const LOGO = `sanviiz.dev`;
 
 export const PROFILE_IMAGE_FILE = `profile_image.jpg`;
 export const PROFILE_IMAGE_ALT = `Profile picture`;
@@ -12,7 +14,7 @@ export const INTRODUCE = `I'm`;
 export const ABOUT_LINK_DESCRIPTION = `About me`;
 export const HOME_LINK_DESCRIPTION = `Home`;
 export const CONTACT_LINK_DESCRIPTION = `Contact`;
-export const WINDOW_TITLE = `All about ${NAME}`;
+export const WINDOW_TITLE = `All about ${AKA}`;
 export const WINDOW_ICON = `favicon.svg`;
 
 export const VIEWPORT_CONTENT = `initial-scale=1.0, width=device-width`;
