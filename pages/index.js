@@ -86,13 +86,13 @@ export default function Home() {
             <h2 className="md:text-6xl text-2xl font-bold">- {_.ROLE}</h2>
           </div>
           <div>
-            <a target="_blank" href={_.FACEBOOK}>
+            <a target="_blank" rel="noopener" href={_.FACEBOOK}>
               <FaFacebookSquare className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer hover:text-purple-700" />
             </a>
-            <a target="_blank" href={_.GITHUB}>
+            <a target="_blank" rel="noopener" href={_.GITHUB}>
               <FaGithubSquare className="md:w-16 md:h-16 w-12 h-12 inline mx-4 cursor-pointer hover:text-purple-700" />
             </a>
-            <a target="_blank" href={_.LINKEDIN}>
+            <a target="_blank" rel="noopener" href={_.LINKEDIN}>
               <FaLinkedin className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer hover:text-purple-700" />
             </a>
           </div>
