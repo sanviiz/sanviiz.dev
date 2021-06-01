@@ -46,7 +46,10 @@ export default function Contact() {
         <main className="flex flex-col justify-center items-center h-full w-full xl:mt-0 mt-24 mb-20">
           <h1 className="md:text-7xl text-4xl font-bold xl:mb-10 mb-6">
             {_.CONTACT_GREETING_START}
-            <span className="text-purple-700"> {_.CONTACT_GREETING_END}</span>
+            <span className="text-purple-700">
+              {" "}
+              {_.CONTACT_GREETING_END + _.ARROW_DOWN_SYMBOL}
+            </span>
           </h1>
           <div className="grid xl:grid-cols-3 gap-8 place-items-center">
             <div

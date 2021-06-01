@@ -1,19 +1,25 @@
 export const AKA = `Sanviiz`;
 export const NAME = `Pakkaphong Akkabut`;
-export const NAME_START_TYPING = `Pak`;
-export const START_TYPING_DELAY = 500;
-export const MIN_TYPING_DELAY = 0;
-export const MAX_TYPING_DELAY = 70;
 export const ROLE = `Web developer`;
 
 export const LOGO = `sanviiz.dev`;
 
+export const STRING_START_TYPING = `Pak`;
+export const START_TYPING_DELAY = 500;
+export const MIN_TYPING_DELAY = 0;
+export const MAX_TYPING_DELAY = 70;
+
 export const PROFILE_IMAGE_FILE = `profile_image.jpg`;
 export const PROFILE_IMAGE_ALT = `Profile picture`;
 
+export const ARROW_UP_SYMBOL = `↑`;
+export const ARROW_DOWN_SYMBOL = `↓`;
+export const ARROW_LEFT_SYMBOL = `←`;
+export const ARROW_RIGHT_SYMBOL = `→`;
+
 export const GREETING = `Hi there!`;
 export const CONTACT_GREETING_START = `Contact`;
-export const CONTACT_GREETING_END = `ME↓`;
+export const CONTACT_GREETING_END = `ME`;
 export const INTRODUCE = `I'm`;
 export const ABOUT_LINK_DESCRIPTION = `About me`;
 export const HOME_LINK_DESCRIPTION = `Home`;

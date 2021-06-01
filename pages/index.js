@@ -10,7 +10,7 @@ import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   const router = useRouter();
-  const [printString, setPrintString] = useState(_.NAME_START_TYPING);
+  const [printString, setPrintString] = useState(_.STRING_START_TYPING);
   const [printedString, setPrintedString] = useState(false);
   const [typingDelay, setTypingDelay] = useState(_.START_TYPING_DELAY);
   const [charIndex, setCharIndex] = useState(printString.length);
@@ -107,7 +107,7 @@ export default function Home() {
                 href="#"
                 className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700"
               >
-                {_.ABOUT_LINK_DESCRIPTION} →
+                {`${_.ABOUT_LINK_DESCRIPTION} ${_.ARROW_RIGHT_SYMBOL}`}
               </a>
             </Link>
           </div>

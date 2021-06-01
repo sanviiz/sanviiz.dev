@@ -149,7 +149,7 @@ export default function About() {
                   href="#"
                   className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700"
                 >
-                  ← {_.HOME_LINK_DESCRIPTION}
+                  {`${_.ARROW_LEFT_SYMBOL} ${_.HOME_LINK_DESCRIPTION}`}
                 </a>
               </Link>
               <Link href={ROUTES.CONTACT}>
@@ -157,7 +157,7 @@ export default function About() {
                   href="#"
                   className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700"
                 >
-                  {_.CONTACT_LINK_DESCRIPTION} →
+                  {`${_.CONTACT_LINK_DESCRIPTION} ${_.ARROW_RIGHT_SYMBOL}`}
                 </a>
               </Link>
             </div>
