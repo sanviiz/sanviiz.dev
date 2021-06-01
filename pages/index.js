@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
@@ -27,7 +27,7 @@ export default function Home() {
     else return setCharIndex(() => charIndex + 1);
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     let isMounted = true;
     setTimeout(() => {
       if (isMounted) {
