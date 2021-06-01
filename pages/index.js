@@ -55,7 +55,7 @@ export default function Home() {
         />
         <meta
           property="og:description"
-          content={SEO.HOME_OGDESCRIPTIONS_CONTENT}
+          content={SEO.HOME_OGDESCRIPTION_CONTENT}
         />
       </Head>
 

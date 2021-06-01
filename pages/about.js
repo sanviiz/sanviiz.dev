@@ -29,7 +29,7 @@ export default function About() {
         />
         <meta
           property="og:description"
-          content={SEO.ABOUT_OGDESCRIPTIONS_CONTENT}
+          content={SEO.ABOUT_OGDESCRIPTION_CONTENT}
         />
       </Head>
 

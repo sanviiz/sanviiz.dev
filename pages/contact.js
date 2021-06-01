@@ -38,7 +38,7 @@ export default function Contact() {
         />
         <meta
           property="og:description"
-          content={SEO.CONTACT_OGDESCRIPTIONS_CONTENT}
+          content={SEO.CONTACT_OGDESCRIPTION_CONTENT}
         />
       </Head>
 
