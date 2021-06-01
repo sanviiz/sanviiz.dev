@@ -47,7 +47,12 @@ export default function Contact() {
             <span className="text-purple-700"> {_.CONTACT_GREETING_END}</span>
           </h1>
           <div className="grid xl:grid-cols-3 gap-8 place-items-center">
-            <a target="_blank" href={_.FACEBOOK} className="w-full">
+            <a
+              target="_blank"
+              rel="noopener"
+              href={_.FACEBOOK}
+              className="w-full"
+            >
               <div className="md:w-80 w-full h-32 border border-black xl:hover:border-purple-700 bg-white xl:hover:text-purple-700 rounded-lg cursor-pointer flex items-center xl:hover:transform xl:hover:scale-110 transition active:border-purple-700 active:text-purple-700 ease-in-out">
                 <FaFacebook className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
                 <div>
@@ -57,7 +62,12 @@ export default function Contact() {
                 </div>
               </div>
             </a>
-            <a target="_blank" href={_.GITHUB} className="w-full">
+            <a
+              target="_blank"
+              rel="noopener"
+              href={_.GITHUB}
+              className="w-full"
+            >
               <div className="md:w-80 w-full h-32 border border-black xl:hover:border-purple-700 bg-white xl:hover:text-purple-700 rounded-lg cursor-pointer flex items-center xl:hover:transform xl:hover:scale-110 transition active:border-purple-700 active:text-purple-700 ease-in-out">
                 <FaGithub className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
                 <div>
@@ -66,7 +76,12 @@ export default function Contact() {
                 </div>
               </div>
             </a>
-            <a target="_blank" href={_.LINKEDIN} className="w-full">
+            <a
+              target="_blank"
+              rel="noopener"
+              href={_.LINKEDIN}
+              className="w-full"
+            >
               <div className="md:w-80 w-full h-32 border border-black xl:hover:border-purple-700 bg-white xl:hover:text-purple-700 rounded-lg cursor-pointer flex items-center xl:hover:transform xl:hover:scale-110 transition active:border-purple-700 active:text-purple-700 ease-in-out">
                 <FaLinkedin className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
                 <div>
