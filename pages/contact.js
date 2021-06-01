@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import * as _ from "../assets/constants";
 import * as SEO from "../assets/seo";
 import {
@@ -12,6 +13,7 @@ import {
 } from "react-icons/fa";
 
 export default function Contact() {
+  const router = useRouter();
   const [copyStatus, setCopyStatus] = useState("");
 
   const handleClickToCopy = () => {
@@ -47,50 +49,34 @@ export default function Contact() {
             <span className="text-purple-700"> {_.CONTACT_GREETING_END}</span>
           </h1>
           <div className="grid xl:grid-cols-3 gap-8 place-items-center">
-            <a
-              target="_blank"
-              rel="noopener"
-              href={_.FACEBOOK}
-              className="w-full"
+            <div
+              className="md:w-80 w-full h-32 border border-black xl:hover:border-purple-700 bg-white xl:hover:text-purple-700 rounded-lg cursor-pointer flex items-center xl:hover:transform xl:hover:scale-110 transition active:border-purple-700 active:text-purple-700 ease-in-out"
+              onClick={() => router.push(_.FACEBOOK)}
             >
-              <div className="md:w-80 w-full h-32 border border-black xl:hover:border-purple-700 bg-white xl:hover:text-purple-700 rounded-lg cursor-pointer flex items-center xl:hover:transform xl:hover:scale-110 transition active:border-purple-700 active:text-purple-700 ease-in-out">
-                <FaFacebook className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
-                <div>
-                  <span className="text-lg mr-4">
-                    {_.FACEBOOK_DISPLAY_NAME}
-                  </span>
-                </div>
+              <FaFacebook className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
+              <div>
+                <span className="text-lg mr-4">{_.FACEBOOK_DISPLAY_NAME}</span>
               </div>
-            </a>
-            <a
-              target="_blank"
-              rel="noopener"
-              href={_.GITHUB}
-              className="w-full"
+            </div>
+            <div
+              className="md:w-80 w-full h-32 border border-black xl:hover:border-purple-700 bg-white xl:hover:text-purple-700 rounded-lg cursor-pointer flex items-center xl:hover:transform xl:hover:scale-110 transition active:border-purple-700 active:text-purple-700 ease-in-out"
+              onClick={() => router.push(_.GITHUB)}
             >
-              <div className="md:w-80 w-full h-32 border border-black xl:hover:border-purple-700 bg-white xl:hover:text-purple-700 rounded-lg cursor-pointer flex items-center xl:hover:transform xl:hover:scale-110 transition active:border-purple-700 active:text-purple-700 ease-in-out">
-                <FaGithub className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
-                <div>
-                  <span className="text-lg block">{_.GITHUB_DISPLAY_NAME}</span>
-                  <span className="text-lg mr-4">({_.NAME})</span>
-                </div>
+              <FaGithub className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
+              <div>
+                <span className="text-lg block">{_.GITHUB_DISPLAY_NAME}</span>
+                <span className="text-lg mr-4">({_.NAME})</span>
               </div>
-            </a>
-            <a
-              target="_blank"
-              rel="noopener"
-              href={_.LINKEDIN}
-              className="w-full"
+            </div>
+            <div
+              className="md:w-80 w-full h-32 border border-black xl:hover:border-purple-700 bg-white xl:hover:text-purple-700 rounded-lg cursor-pointer flex items-center xl:hover:transform xl:hover:scale-110 transition active:border-purple-700 active:text-purple-700 ease-in-out"
+              onClick={() => router.push(_.LINKEDIN)}
             >
-              <div className="md:w-80 w-full h-32 border border-black xl:hover:border-purple-700 bg-white xl:hover:text-purple-700 rounded-lg cursor-pointer flex items-center xl:hover:transform xl:hover:scale-110 transition active:border-purple-700 active:text-purple-700 ease-in-out">
-                <FaLinkedin className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
-                <div>
-                  <span className="text-lg mr-4">
-                    {_.LINKEDIN_DISPLAY_NAME}
-                  </span>
-                </div>
+              <FaLinkedin className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
+              <div>
+                <span className="text-lg mr-4">{_.LINKEDIN_DISPLAY_NAME}</span>
               </div>
-            </a>
+            </div>
             <a href={_.EMAIL}>
               <div className="md:w-80 w-full h-32 border border-black xl:hover:border-purple-700 bg-white xl:hover:text-purple-700 rounded-lg cursor-pointer flex items-center xl:hover:transform xl:hover:scale-110 transition active:border-purple-700 active:text-purple-700 ease-in-out">
                 <FaEnvelopeOpenText className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer mx-4" />
