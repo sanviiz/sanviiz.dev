@@ -1,5 +1,9 @@
 export const AKA = `Sanviiz`;
 export const NAME = `Pakkaphong Akkabut`;
+export const NAME_START_TYPING = `Pak`;
+export const START_TYPING_DELAY = 500;
+export const MIN_TYPING_DELAY = 0;
+export const MAX_TYPING_DELAY = 70;
 export const ROLE = `Web developer`;
 
 export const LOGO = `sanviiz.dev`;

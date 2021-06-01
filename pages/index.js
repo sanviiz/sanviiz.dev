@@ -1,3 +1,4 @@
+import { useLayoutEffect, useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
@@ -7,6 +8,37 @@ import * as SEO from "../assets/seo";
 import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
+  const [printString, setPrintString] = useState(_.NAME_START_TYPING);
+  const [printedString, setPrintedString] = useState(false);
+  const [typingDelay, setTypingDelay] = useState(_.START_TYPING_DELAY);
+  const [charIndex, setCharIndex] = useState(printString.length);
+  const string = _.NAME;
+
+  const randomTypingDelay = (minValue, maxValue) => {
+    return setTypingDelay(
+      Math.floor(Math.random() * (maxValue - minValue) + maxValue)
+    );
+  };
+
+  const renderTypingString = () => {
+    randomTypingDelay(_.MIN_TYPING_DELAY, _.MAX_TYPING_DELAY);
+    setPrintString(() => printString + string.charAt(charIndex));
+    if (charIndex === string.length) return setPrintedString(true);
+    else return setCharIndex(() => charIndex + 1);
+  };
+
+  useLayoutEffect(() => {
+    let isMounted = true;
+    setTimeout(() => {
+      if (isMounted) {
+        renderTypingString();
+      }
+    }, typingDelay);
+    return () => {
+      isMounted = false;
+    };
+  }, [charIndex]);
+
   return (
     <>
       <Head>
@@ -41,8 +73,13 @@ export default function Home() {
             <h1 className="md:text-6xl text-2xl font-bold">
               {_.INTRODUCE}
               <span className="md:text-7xl text-3xl font-bold text-purple-700">
-                {` ${_.NAME}`}
+                {` ${printString}`}
               </span>
+              {!printedString && (
+                <span className="cursor h-full bg-gray-400 text-transparent font-light animate-pulse">
+                  |
+                </span>
+              )}
             </h1>
           </div>
           <div className="w-4/5 text-right md:mb-10 mb-4">
