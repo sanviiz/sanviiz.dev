@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "../styles/globals.css";
 import Navbar from "../components/navbar";
 import { useRouter } from "next/router";
