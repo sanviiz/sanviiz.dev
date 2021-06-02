@@ -17,6 +17,8 @@ export const ARROW_DOWN_SYMBOL = `↓`;
 export const ARROW_LEFT_SYMBOL = `←`;
 export const ARROW_RIGHT_SYMBOL = `→`;
 
+export const GO_TO_TOP_DESCRIPTION = `Top`;
+
 export const GREETING = `Hi there!`;
 export const CONTACT_GREETING_START = `Contact`;
 export const CONTACT_GREETING_END = `ME`;

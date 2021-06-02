@@ -15,6 +15,10 @@ import { technicalProjectList } from "../assets/contents/technicalProjects";
 import { businessProjectList } from "../assets/contents/businessProjects";
 
 export default function About() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       <Head>
@@ -152,6 +156,12 @@ export default function About() {
                   {`${_.ARROW_LEFT_SYMBOL} ${_.HOME_LINK_DESCRIPTION}`}
                 </a>
               </Link>
+              <span
+                onClick={() => scrollToTop()}
+                className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700"
+              >
+                {`${_.ARROW_UP_SYMBOL} ${_.GO_TO_TOP_DESCRIPTION}`}
+              </span>
               <Link href={ROUTES.CONTACT}>
                 <a
                   href="#"
