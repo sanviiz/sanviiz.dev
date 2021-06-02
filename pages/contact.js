@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Bounce from "react-reveal/Bounce";
+import Pulse from "react-reveal/Pulse";
 import * as _ from "../assets/constants";
 import * as SEO from "../assets/seo";
 import {
@@ -45,7 +45,7 @@ export default function Contact() {
 
       <div className="container mx-auto xl:mt-0 w-screen xl:h-screen mt-4">
         <main className="flex flex-col justify-center items-center h-full w-full xl:mt-0 mt-24 mb-20">
-          <Bounce top>
+          <Pulse>
             <h1 className="md:text-7xl text-4xl font-bold xl:mb-10 mb-6">
               {_.CONTACT_GREETING_START}
               <span className="text-purple-700">
@@ -53,7 +53,7 @@ export default function Contact() {
                 {_.CONTACT_GREETING_END + _.ARROW_DOWN_SYMBOL}
               </span>
             </h1>
-          </Bounce>
+          </Pulse>
           <div className="grid xl:grid-cols-3 gap-8 place-items-center">
             <div
               className="md:w-80 w-full h-32 border border-black xl:hover:border-purple-700 bg-white xl:hover:text-purple-700 rounded-lg cursor-pointer flex items-center xl:hover:transform xl:hover:scale-110 transition active:border-purple-700 active:text-purple-700 ease-in-out"
