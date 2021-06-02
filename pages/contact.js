@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Slide from "react-reveal/Slide";
+import Fade from "react-reveal/Fade";
 import * as _ from "../assets/constants";
 import * as SEO from "../assets/seo";
 import {
@@ -46,7 +46,7 @@ export default function Contact() {
 
       <div className="container mx-auto xl:mt-0 w-screen xl:h-screen mt-4">
         <main className="flex flex-col justify-center items-center h-full w-full xl:mt-0 mt-24 mb-20">
-          <Slide top>
+          <Fade top>
             <h1 className="md:text-7xl text-4xl font-bold xl:mb-10 mb-6">
               {_.CONTACT_GREETING_START}
               <span className="text-purple-700">
@@ -54,7 +54,7 @@ export default function Contact() {
                 {_.CONTACT_GREETING_END + _.ARROW_DOWN_SYMBOL}
               </span>
             </h1>
-          </Slide>
+          </Fade>
           <div className="grid xl:grid-cols-3 gap-8 place-items-center">
             <div
               className={contactBoxClassName}
