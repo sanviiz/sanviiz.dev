@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
+import Fade from "react-reveal/Fade";
 import * as _ from "../assets/constants";
 import * as ROUTES from "../assets/routes";
 import * as SEO from "../assets/seo";
@@ -93,30 +94,32 @@ export default function About() {
                 <BusinessProjectLists />
               </div>
             </div>
-            <div className="flex justify-between text-right lg:mt-6 mt-2 mb-20">
-              <Link href={ROUTES.HOME}>
-                <a
-                  href="#"
+            <Fade bottom>
+              <div className="flex justify-between text-right lg:mt-6 mt-2 mb-20">
+                <Link href={ROUTES.HOME}>
+                  <a
+                    href="#"
+                    className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700"
+                  >
+                    {`${_.ARROW_LEFT_SYMBOL} ${_.HOME_LINK_DESCRIPTION}`}
+                  </a>
+                </Link>
+                <span
+                  onClick={() => scrollToTop()}
                   className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700"
                 >
-                  {`${_.ARROW_LEFT_SYMBOL} ${_.HOME_LINK_DESCRIPTION}`}
-                </a>
-              </Link>
-              <span
-                onClick={() => scrollToTop()}
-                className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700"
-              >
-                {`${_.ARROW_UP_SYMBOL} ${_.GO_TO_TOP_DESCRIPTION}`}
-              </span>
-              <Link href={ROUTES.CONTACT}>
-                <a
-                  href="#"
-                  className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700"
-                >
-                  {`${_.CONTACT_LINK_DESCRIPTION} ${_.ARROW_RIGHT_SYMBOL}`}
-                </a>
-              </Link>
-            </div>
+                  {`${_.ARROW_UP_SYMBOL} ${_.GO_TO_TOP_DESCRIPTION}`}
+                </span>
+                <Link href={ROUTES.CONTACT}>
+                  <a
+                    href="#"
+                    className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700"
+                  >
+                    {`${_.CONTACT_LINK_DESCRIPTION} ${_.ARROW_RIGHT_SYMBOL}`}
+                  </a>
+                </Link>
+              </div>
+            </Fade>
           </div>
         </main>
       </div>
