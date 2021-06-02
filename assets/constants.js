@@ -38,6 +38,7 @@ export const NAVBAR_CONTACT_LINK_TITLE = `CONTACT`;
 
 export const FACEBOOK = `https://www.facebook.com/sanviiz/`;
 export const GITHUB = `https://github.com/sanviiz/`;
+export const GITHUB_REPOSITORY = `https://github.com/sanviiz/sanviiz.dev`;
 export const INSTAGRAM = `https://www.instagram.com/taze_sanviiz/`;
 export const LINKEDIN = `https://www.linkedin.com/in/sanviiz/`;
 export const WEBSITE = `https://www.sanviiz.dev/`;

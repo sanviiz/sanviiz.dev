@@ -1,9 +1,12 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import * as _ from "../assets/constants";
 import * as ROUTES from "../assets/routes";
+import { FaGithub } from "react-icons/fa";
 
 export default function Navbar() {
+  const router = useRouter();
   const [toggleHidden, setToggleHidden] = useState("hidden");
   const navbarWrapperRef = useRef(null);
 
@@ -88,12 +91,16 @@ export default function Navbar() {
           <Link href={ROUTES.CONTACT}>
             <a
               href="#"
-              className="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-700"
+              className="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-700 mr-4"
               onClick={handlerLinkClick}
             >
               {_.NAVBAR_CONTACT_LINK_TITLE}
             </a>
           </Link>
+          <FaGithub
+            className="w-7 h-7 inline-block align-top cursor-pointer lg:mt-0 mt-4 text-gray-400 hover:text-gray-500 transition-colors duration-200"
+            onClick={() => router.push(_.GITHUB_REPOSITORY)}
+          />
         </div>
       </div>
     </nav>
