@@ -4,8 +4,15 @@ import { useRouter } from "next/router";
 import * as _ from "../assets/constants";
 import * as ROUTES from "../assets/routes";
 import { FaGithub } from "react-icons/fa";
+import Switch from "react-switch";
+import { useAppContext } from "../contexts/state";
+import { IoMoon } from "react-icons/io5";
+import { MdWbSunny } from "react-icons/md";
 
 export default function Navbar() {
+  const sharedState = useAppContext();
+  const [darkTheme, setDarkTheme] = sharedState.darkTheme;
+
   const router = useRouter();
   const [toggleHidden, setToggleHidden] = useState("hidden");
   const navbarWrapperRef = useRef(null);
@@ -17,6 +24,10 @@ export default function Navbar() {
 
   const handlerLinkClick = () => {
     setToggleHidden("hidden");
+  };
+
+  const handleChange = () => {
+    setDarkTheme(!darkTheme);
   };
 
   useEffect(() => {
@@ -39,9 +50,9 @@ export default function Navbar() {
   return (
     <nav
       ref={navbarWrapperRef}
-      className="flex items-center justify-between flex-wrap p-6 fixed w-full top-0 bg-white border-b border-gray-300 z-10"
+      className="flex items-center justify-between flex-wrap p-6 fixed w-full top-0 bg-white border-b border-gray-300 z-10 dark:bg-gray-900 dark:border-gray-700 transition-all"
     >
-      <div className="flex items-center flex-shrink-0 text-black mr-6">
+      <div className="flex items-center flex-shrink-0 text-black mr-6 dark:text-white transition-all">
         <Link href={ROUTES.HOME}>
           <span
             className="font-semibold lg:text-3xl text-2xl tracking-tight cursor-pointer"
@@ -53,7 +64,7 @@ export default function Navbar() {
       </div>
       <div className="block lg:hidden">
         <button
-          className="flex items-center px-3 py-2 border rounded border-black hover:text-purple-700 hover:border-purple-700"
+          className="flex items-center px-3 py-2 border rounded border-black hover:text-purple-700 hover:border-purple-700 dark:text-white dark:border-white transition-all"
           onClick={handlerButtonClick}
         >
           <svg
@@ -67,13 +78,25 @@ export default function Navbar() {
         </button>
       </div>
       <div
-        className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:text-right ${toggleHidden}`}
+        className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:text-right ${toggleHidden} dark:text-white transition-all`}
       >
         <div className="text-lg font-semibold lg:flex-grow">
+          <Switch
+            className="align-top"
+            onColor="#202a37"
+            offColor="#202a37"
+            uncheckedIcon={
+              <MdWbSunny className="h-full ml-1.5 text-yellow-400" />
+            }
+            checkedIcon={<IoMoon className="h-full w-4 ml-2 text-white" />}
+            activeBoxShadow="none"
+            onChange={() => handleChange()}
+            checked={darkTheme}
+          />
           <Link href={ROUTES.HOME}>
             <a
               href="#"
-              className="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-700 mr-4"
+              className="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-700 dark:hover:text-green-500 transition-all mx-4"
               onClick={handlerLinkClick}
             >
               {_.NAVBAR_HOME_LINK_TITLE}
@@ -82,7 +105,7 @@ export default function Navbar() {
           <Link href={ROUTES.ABOUT}>
             <a
               href="#"
-              className="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-700 mr-4"
+              className="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-700 dark:hover:text-green-500 transition-all mr-4"
               onClick={handlerLinkClick}
             >
               {_.NAVBAR_ABOUT_LINK_TITLE}
@@ -91,7 +114,7 @@ export default function Navbar() {
           <Link href={ROUTES.CONTACT}>
             <a
               href="#"
-              className="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-700 mr-4"
+              className="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-700 dark:hover:text-green-500 transition-all mr-4"
               onClick={handlerLinkClick}
             >
               {_.NAVBAR_CONTACT_LINK_TITLE}

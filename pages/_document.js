@@ -27,13 +27,50 @@ class MyDocument extends Document {
             }}
           />
         </Head>
-        <body className="font-sans">
+        <body className="font-sans bg-white dark:bg-gray-800 transition-all">
+          <script
+            dangerouslySetInnerHTML={{
+              __html: blockingSetInitialColorMode,
+            }}
+          ></script>
           <Main />
           <NextScript />
         </body>
       </Html>
     );
   }
+}
+
+const blockingSetInitialColorMode = `(function() {
+	${setInitialColorMode.toString()}
+	setInitialColorMode();
+})()
+`;
+
+function setInitialColorMode() {
+  function getInitialColorMode() {
+    const persistedColorPreference = window.localStorage.getItem("theme");
+    const hasPersistedPreference = typeof persistedColorPreference === "string";
+
+    if (hasPersistedPreference) {
+      return persistedColorPreference;
+    }
+
+    const mql = window.matchMedia("(prefers-color-scheme: dark)");
+    const hasMediaQueryPreference = typeof mql.matches === "boolean";
+
+    if (hasMediaQueryPreference) {
+      return mql.matches ? "dark" : "light";
+    }
+
+    return "light";
+  }
+
+  const colorMode = getInitialColorMode();
+  const root = document.documentElement;
+  root.style.setProperty("--initial-color-mode", colorMode);
+
+  if (colorMode === "dark") document.documentElement.className = "dark";
 }
 
 export default MyDocument;

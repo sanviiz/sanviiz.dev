@@ -1,9 +1,13 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 const AppContext = createContext(null);
 
 export function AppContextWrapper({ children }) {
-  const sharedState = {};
+  const [darkTheme, setDarkTheme] = useState(false);
+
+  const sharedState = {
+    darkTheme: [darkTheme, setDarkTheme],
+  };
 
   return (
     <AppContext.Provider value={sharedState}>{children}</AppContext.Provider>

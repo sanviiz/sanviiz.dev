@@ -7,8 +7,12 @@ import * as _ from "../assets/constants";
 import * as ROUTES from "../assets/routes";
 import * as SEO from "../assets/seo";
 import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { useAppContext } from "../contexts/state";
 
 export default function Home() {
+  const sharedState = useAppContext();
+  const [darkTheme, setDarkTheme] = sharedState.darkTheme;
+
   const router = useRouter();
   const [printString, setPrintString] = useState(_.STRING_START_TYPING);
   const [printedString, setPrintedString] = useState(false);
@@ -28,6 +32,26 @@ export default function Home() {
     if (charIndex === string.length) return setPrintedString(true);
     else return setCharIndex(() => charIndex + 1);
   };
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    const initialColorValue = root.style.getPropertyValue(
+      "--initial-color-mode"
+    );
+    setDarkTheme(initialColorValue === "dark");
+  }, []);
+
+  useEffect(() => {
+    if (darkTheme !== undefined) {
+      if (darkTheme) {
+        document.documentElement.className = "dark";
+        window.localStorage.setItem("theme", "dark");
+      } else {
+        document.documentElement.className = "light";
+        window.localStorage.setItem("theme", "light");
+      }
+    }
+  }, [darkTheme]);
 
   useEffect(() => {
     let isMounted = true;
@@ -68,13 +92,15 @@ export default function Home() {
             width={240}
             height={240}
             quality={90}
-            className={`rounded-full bg-gray-100`}
+            className={`rounded-full bg-gray-100 dark:bg-transparent`}
           />
           <div className="w-4/5 text-left md:mt-8 mt-4">
-            <h2 className="md:text-6xl text-2xl font-bold">{_.GREETING}</h2>
-            <h1 className="md:text-6xl text-2xl font-bold">
+            <h2 className="md:text-6xl text-2xl font-bold dark:text-white transition-all">
+              {_.GREETING}
+            </h2>
+            <h1 className="md:text-6xl text-2xl font-bold dark:text-white transition-all">
               {_.INTRODUCE}
-              <span className="md:text-7xl text-3xl font-bold text-purple-700">
+              <span className="md:text-7xl text-3xl font-bold text-purple-700 dark:text-green-500 transition-all">
                 {` ${printString}`}
               </span>
               {!printedString && (
@@ -85,27 +111,29 @@ export default function Home() {
             </h1>
           </div>
           <div className="w-4/5 text-right md:mb-10 mb-4">
-            <h2 className="md:text-6xl text-2xl font-bold">- {_.ROLE}</h2>
+            <h2 className="md:text-6xl text-2xl font-bold dark:text-white transition-all">
+              - {_.ROLE}
+            </h2>
           </div>
           <div>
             <FaFacebookSquare
-              className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer hover:text-purple-700"
+              className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer hover:text-purple-700 dark:text-white dark:hover:text-green-500 transition-all"
               onClick={() => router.push(_.FACEBOOK)}
             />
             <FaGithubSquare
-              className="md:w-16 md:h-16 w-12 h-12 inline mx-4 cursor-pointer hover:text-purple-700"
+              className="md:w-16 md:h-16 w-12 h-12 inline mx-4 cursor-pointer hover:text-purple-700 dark:text-white dark:hover:text-green-500 transition-all"
               onClick={() => router.push(_.GITHUB)}
             />
             <FaLinkedin
-              className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer hover:text-purple-700"
+              className="md:w-16 md:h-16 w-12 h-12 inline cursor-pointer hover:text-purple-700 dark:text-white dark:hover:text-green-500 transition-all"
               onClick={() => router.push(_.LINKEDIN)}
             />
           </div>
-          <div className="w-4/5 text-right mt-4 xl:mb-0 mb-20">
+          <div className="w-4/5 text-right mt-4 xl:mb-0 mb-20 dark:text-white transition-all">
             <Link href={ROUTES.ABOUT}>
               <a
                 href="#"
-                className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700"
+                className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700 dark:hover:text-green-500 transition-all"
               >
                 {`${_.ABOUT_LINK_DESCRIPTION} ${_.ARROW_RIGHT_SYMBOL}`}
               </a>
