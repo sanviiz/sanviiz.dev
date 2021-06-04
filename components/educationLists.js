@@ -7,7 +7,7 @@ export default function EducationLists() {
   return (
     <Fade left>
       <>
-        <h3 className="text-3xl font-normal text-gray-500">
+        <h3 className="text-3xl font-normal text-gray-500 dark:text-gray-400 transition-all">
           {_.EDUCATION_TITLE}
         </h3>
         {educationList.map((educationElement) => {

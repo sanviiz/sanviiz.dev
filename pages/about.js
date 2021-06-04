@@ -43,45 +43,46 @@ export default function About() {
             width={150}
             height={150}
             quality={90}
-            className={`rounded-full bg-gray-100`}
+            className={`rounded-full bg-gray-10 dark:bg-transparent`}
           />
-          <h3 className="text-3xl font-normal mt-3">{_.NAME}</h3>
-          <div className="text-xl font-light my-3 text-center">
+          <h3 className="text-3xl font-normal mt-3 dark:text-white transition-all">
+            {_.NAME}
+          </h3>
+          <div className="text-xl font-light my-3 text-center dark:text-white">
             <a
               target="_blank"
               href={_.GITHUB}
-              className="cursor-pointer hover:text-purple-700"
+              className="cursor-pointer hover:text-purple-700 dark:hover:text-green-500 transition-all"
             >
               {_.GITHUB_CONTACT_DISPLAY}
             </a>
-            <span className="md:inline hidden"> | </span>
+            <span className="md:inline hidden transition-all"> | </span>
             <br className="md:hidden" />
             <a
               target="_blank"
               href={_.WEBSITE}
-              className="cursor-pointer hover:text-purple-700"
+              className="cursor-pointer hover:text-purple-700 dark:hover:text-green-500 transition-all"
             >
               {_.WEBSITE_CONTACT_DISPLAY}
             </a>
-            <span className="md:inline hidden"> | </span>
+            <span className="md:inline hidden transition-all"> | </span>
             <br className="md:hidden" />
-            <address className="inline not-italic">
-              <a
-                href={_.EMAIL}
-                className="cursor-pointer hover:text-purple-700"
-              >
-                {_.EMAIL_CONTACT_DISPLAY}
-              </a>
-            </address>
-            <span className="md:inline hidden"> | </span>
+            <a
+              href={_.EMAIL}
+              className="cursor-pointer hover:text-purple-700 dark:hover:text-green-500 transition-all"
+            >
+              {_.EMAIL_CONTACT_DISPLAY}
+            </a>
+            <span className="md:inline hidden transition-all"> | </span>
             <br className="md:hidden" />
-            <address className="inline not-italic">
-              <a href={_.TEL} className="cursor-pointer hover:text-purple-700">
-                {_.TEL_CONTACT_DISPLAY}
-              </a>
-            </address>
+            <a
+              href={_.TEL}
+              className="cursor-pointer hover:text-purple-700 dark:hover:text-green-500 transition-all"
+            >
+              {_.TEL_CONTACT_DISPLAY}
+            </a>
           </div>
-          <hr className="w-full border-black" />
+          <hr className="w-full border-black dark:border-white" />
           <div className="w-4/5 text-left mt-4">
             <div className="grid md:grid-cols-2 md:gap-16 grid-cols-1">
               <div className="mt-3">
@@ -95,25 +96,25 @@ export default function About() {
               </div>
             </div>
             <Fade bottom>
-              <div className="flex justify-between text-right lg:mt-6 mt-2 mb-20">
+              <div className="flex justify-between text-right lg:mt-6 mt-2 mb-20 dark:text-white">
                 <Link href={ROUTES.HOME}>
                   <a
                     href="#"
-                    className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700"
+                    className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700 dark:hover:text-green-500 transition-all"
                   >
                     {`${_.ARROW_LEFT_SYMBOL} ${_.HOME_LINK_DESCRIPTION}`}
                   </a>
                 </Link>
                 <span
                   onClick={() => scrollToTop()}
-                  className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700"
+                  className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700 dark:hover:text-green-500 transition-all"
                 >
                   {`${_.ARROW_UP_SYMBOL} ${_.GO_TO_TOP_DESCRIPTION}`}
                 </span>
                 <Link href={ROUTES.CONTACT}>
                   <a
                     href="#"
-                    className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700"
+                    className="md:text-xl text-base font-semibold underline cursor-pointer hover:text-purple-700 dark:hover:text-green-500 transition-all"
                   >
                     {`${_.CONTACT_LINK_DESCRIPTION} ${_.ARROW_RIGHT_SYMBOL}`}
                   </a>

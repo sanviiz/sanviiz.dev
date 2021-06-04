@@ -5,13 +5,11 @@ import * as _ from "../assets/constants";
 import * as ROUTES from "../assets/routes";
 import { FaGithub } from "react-icons/fa";
 import Switch from "react-switch";
-import { useAppContext } from "../contexts/state";
 import { IoMoon } from "react-icons/io5";
 import { MdWbSunny } from "react-icons/md";
 
-export default function Navbar() {
-  const sharedState = useAppContext();
-  const [darkTheme, setDarkTheme] = sharedState.darkTheme;
+export default function Navbar(props) {
+  const { darkTheme, setDarkTheme } = props;
 
   const router = useRouter();
   const [toggleHidden, setToggleHidden] = useState("hidden");

@@ -7,7 +7,7 @@ export default function WorkLists() {
   return (
     <Fade bottom>
       <>
-        <h3 className="text-3xl font-normal text-gray-500 mt-5">
+        <h3 className="text-3xl font-normal text-gray-500 mt-5 dark:text-gray-400 transition-all">
           {_.WORK_TITLE}
         </h3>
         {workList.map((workElement) => {
