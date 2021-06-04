@@ -129,7 +129,7 @@ export default function Home() {
               onClick={() => router.push(_.LINKEDIN)}
             />
           </div>
-          <div className="w-4/5 text-right mt-4 xl:mb-0 mb-20 dark:text-white transition-all">
+          <div className="w-4/5 text-right mt-4 xl:mb-0 mb-20 dark:text-white">
             <Link href={ROUTES.ABOUT}>
               <a
                 href="#"

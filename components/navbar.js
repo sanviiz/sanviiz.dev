@@ -78,11 +78,11 @@ export default function Navbar() {
         </button>
       </div>
       <div
-        className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:text-right ${toggleHidden} dark:text-white transition-all`}
+        className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:text-right ${toggleHidden} dark:text-white`}
       >
         <div className="text-lg font-semibold lg:flex-grow">
           <Switch
-            className="align-top"
+            className="align-top mr-4 lg:mt-0 mt-4"
             onColor="#202a37"
             offColor="#202a37"
             uncheckedIcon={
@@ -96,7 +96,7 @@ export default function Navbar() {
           <Link href={ROUTES.HOME}>
             <a
               href="#"
-              className="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-700 dark:hover:text-green-500 transition-all mx-4"
+              className="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-700 dark:hover:text-green-500 transition-all mr-4"
               onClick={handlerLinkClick}
             >
               {_.NAVBAR_HOME_LINK_TITLE}
