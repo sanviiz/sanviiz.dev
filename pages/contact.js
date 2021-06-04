@@ -16,7 +16,7 @@ import {
 export default function Contact() {
   const router = useRouter();
   const [copyStatus, setCopyStatus] = useState("");
-  const contactBoxClassName = `md:w-80 w-full h-32 border border-black xl:hover:border-purple-700 bg-white xl:hover:text-purple-700 rounded-lg cursor-pointer flex items-center xl:hover:transform xl:hover:scale-110 transition active:border-purple-700 active:text-purple-700 ease-in-out`;
+  const contactBoxClassName = `md:w-80 w-full h-32 border border-black xl:hover:border-purple-700 bg-white dark:text-white dark:bg-gray-900 dark:border-white xl:hover:text-purple-700 dark:xl:hover:text-green-500 dark:xl:hover:border-green-500 rounded-lg cursor-pointer flex items-center xl:hover:transform xl:hover:scale-110 transition-all active:border-purple-700 active:text-purple-700 ease-in-out`;
 
   const handleClickToCopy = () => {
     navigator.clipboard.writeText(_.DISCORD);
@@ -47,9 +47,9 @@ export default function Contact() {
       <div className="container mx-auto xl:mt-0 w-screen xl:h-screen mt-4">
         <main className="flex flex-col justify-center items-center h-full w-full xl:mt-0 mt-24 mb-20">
           <Fade top>
-            <h1 className="md:text-7xl text-4xl font-bold xl:mb-10 mb-6">
+            <h1 className="md:text-7xl text-4xl font-bold xl:mb-10 mb-6 dark:text-white transition-all">
               {_.CONTACT_GREETING_START}
-              <span className="text-purple-700">
+              <span className="text-purple-700 dark:text-green-500 transition-all">
                 {" "}
                 {_.CONTACT_GREETING_END + _.ARROW_DOWN_SYMBOL}
               </span>
