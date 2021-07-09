@@ -3,7 +3,7 @@ export default function Projects(props) {
 
   return (
     <div className="my-2">
-      <h5 className="text-lg font-semibold dark:text-green-500 transition-all">
+      <h5 className="text-lg font-semibold text-purple-700 dark:text-green-500 transition-all">
         <span className="font-bold text-black dark:text-white transition-all">
           {project.TITLE}
         </span>
