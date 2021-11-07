@@ -14,18 +14,18 @@ class MyDocument extends Document {
           <meta property="og:type" content="website" />
           <meta
             property="og:image"
-            content={
+            content={`https://${
               process.env.NEXT_PUBLIC_VERCEL_URL +
               require("../public/images/SEO_banner.png")
-            }
+            }`}
           />
           <meta property="twitter:card" content="summary_large_image" />
           <meta
             property="twitter:image"
-            content={
+            content={`https://${
               process.env.NEXT_PUBLIC_VERCEL_URL +
               require("../public/images/SEO_banner.png")
-            }
+            }`}
           />
 
           <script
