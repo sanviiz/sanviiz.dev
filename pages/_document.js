@@ -10,6 +10,24 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <meta name="theme-color" content="#10b981" />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:image"
+            content={
+              process.env.NEXT_PUBLIC_VERCEL_URL +
+              require("../public/images/SEO_banner.png")
+            }
+          />
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta
+            property="twitter:image"
+            content={
+              process.env.NEXT_PUBLIC_VERCEL_URL +
+              require("../public/images/SEO_banner.png")
+            }
+          />
+
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
@@ -27,7 +45,7 @@ class MyDocument extends Document {
             }}
           />
         </Head>
-        <body className="font-sans bg-white dark:bg-gray-800 transition-all">
+        <body className="font-inter bg-white dark:bg-gray-800 transition-all">
           <script
             dangerouslySetInnerHTML={{
               __html: blockingSetInitialColorMode,

@@ -25,6 +25,22 @@ export default function About() {
         <meta name="description" content={SEO.ABOUT_DESCRIPTION_CONTENT} />
         <meta name="keywords" content={SEO.ABOUT_KEYWORDS_CONTENT} />
         <meta
+          property="og:url"
+          content={process.env.NEXT_PUBLIC_VERCEL_URL + ROUTES.ABOUT}
+        />
+        <meta
+          property="twitter:url"
+          content={process.env.NEXT_PUBLIC_VERCEL_URL + ROUTES.ABOUT}
+        />
+        <meta
+          property="twitter:title"
+          content={SEO.ABOUT_PAGE_TITLE + _.WINDOW_TITLE}
+        />
+        <meta
+          property="twitter:description"
+          content={SEO.ABOUT_DESCRIPTION_CONTENT}
+        />
+        <meta
           property="og:title"
           content={SEO.ABOUT_PAGE_TITLE + _.WINDOW_TITLE}
         />

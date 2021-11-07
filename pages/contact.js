@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Fade from "react-reveal/Fade";
 import * as _ from "../assets/constants";
 import * as SEO from "../assets/seo";
+import * as ROUTES from "../assets/routes";
 import {
   FaFacebook,
   FaGithub,
@@ -34,6 +35,22 @@ export default function Contact() {
         <meta name="viewport" content={_.VIEWPORT_CONTENT} />
         <meta name="description" content={SEO.CONTACT_DESCRIPTION_CONTENT} />
         <meta name="keywords" content={SEO.CONTACT_KEYWORDS_CONTENT} />
+        <meta
+          property="og:url"
+          content={process.env.NEXT_PUBLIC_VERCEL_URL + ROUTES.CONTACT}
+        />
+        <meta
+          property="twitter:url"
+          content={process.env.NEXT_PUBLIC_VERCEL_URL + ROUTES.CONTACT}
+        />
+        <meta
+          property="twitter:title"
+          content={SEO.CONTACT_PAGE_TITLE + _.WINDOW_TITLE}
+        />
+        <meta
+          property="twitter:description"
+          content={SEO.CONTACT_DESCRIPTION_CONTENT}
+        />
         <meta
           property="og:title"
           content={SEO.CONTACT_PAGE_TITLE + _.WINDOW_TITLE}

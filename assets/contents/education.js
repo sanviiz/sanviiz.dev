@@ -9,7 +9,7 @@ export const educationList = [
     PROGRAM:
       "Bachelor of Engineering in Electronic and Telecommunication Engineering",
     STATUS:
-      "Present, King Mongkut’s University of Technology Thonbury 3rd Year Student",
+      "Present, King Mongkut’s University of Technology Thonbury 4rd Year Student",
   },
   {
     ACADEMY: "CODEMOBILES ONLINE COURSE",

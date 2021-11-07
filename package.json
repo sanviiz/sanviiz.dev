@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "next": "latest",
+    "next-images": "^1.8.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0",

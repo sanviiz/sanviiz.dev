@@ -9,10 +9,10 @@ export default function Projects(props) {
         </span>
         <br className="lg:hidden" /> | {project.KEYWORDS.join(", ")}
       </h5>
-      <p className="text-base font-normal text-gray-600 dark:text-gray-300 transition-all">
+      <p className="text-base font-normal text-gray-600 dark:text-gray-400 transition-all">
         {project.DATE} | {project.PLACE}
       </p>
-      <ul className="list-disc list-inside text-base font-normal text-gray-600 dark:text-gray-300 transition-all">
+      <ul className="list-disc ml-4 text-base font-normal text-gray-600 dark:text-gray-400 transition-all">
         {project.LISTS.map((detailElement) => {
           return (
             <li key={project.LISTS.indexOf(detailElement)}>{detailElement}</li>

@@ -49,6 +49,19 @@ export default function Home() {
         <meta name="viewport" content={_.VIEWPORT_CONTENT} />
         <meta name="description" content={SEO.HOME_DESCRIPTION_CONTENT} />
         <meta name="keywords" content={SEO.HOME_KEYWORDS_CONTENT} />
+        <meta property="og:url" content={process.env.NEXT_PUBLIC_VERCEL_URL} />
+        <meta
+          property="twitter:url"
+          content={process.env.NEXT_PUBLIC_VERCEL_URL}
+        />
+        <meta
+          property="twitter:title"
+          content={SEO.HOME_PAGE_TITLE + _.WINDOW_TITLE}
+        />
+        <meta
+          property="twitter:description"
+          content={SEO.HOME_DESCRIPTION_CONTENT}
+        />
         <meta
           property="og:title"
           content={SEO.HOME_PAGE_TITLE + _.WINDOW_TITLE}
